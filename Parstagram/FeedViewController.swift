@@ -16,14 +16,41 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var posts = [PFObject]()
     
+    lazy var refresher: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.tintColor = .blue
+        
+        refreshControl.addTarget(self, action: #selector(requestData), for: .valueChanged)
+        
+        
+        return refreshControl
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        tableView.refreshControl = refresher
+        
 
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
    
+    
+    }
+    @objc
+    func requestData() {
+        print("requesting data")
+        
+        let deadline = DispatchTime.now() + .milliseconds(700)
+        DispatchQueue.main.asyncAfter(deadline: deadline) {
+            
+            self.refresher.endRefreshing()
+        }
+        
+        
     
     }
     
