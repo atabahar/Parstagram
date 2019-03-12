@@ -169,6 +169,28 @@
                                             <outlet property="nameLabel" destination="mVK-O0-DOL" id="uDL-JB-Teu"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddCommentCell" id="o0g-dE-Dfn">
+                                        <rect key="frame" x="0.0" y="482" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o0g-dE-Dfn" id="i12-w9-mE6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add a comment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MOh-z9-fCi">
+                                                    <rect key="frame" x="16" y="8" width="351" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.44317100253807107" green="0.44317100253807107" blue="0.44317100253807107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="MOh-z9-fCi" secondAttribute="bottom" constant="8" id="MXg-Ae-LOW"/>
+                                                <constraint firstItem="MOh-z9-fCi" firstAttribute="leading" secondItem="i12-w9-mE6" secondAttribute="leading" constant="16" id="RAJ-Xg-o5R"/>
+                                                <constraint firstAttribute="trailing" secondItem="MOh-z9-fCi" secondAttribute="trailing" constant="8" id="eMo-qm-sZa"/>
+                                                <constraint firstItem="MOh-z9-fCi" firstAttribute="top" secondItem="i12-w9-mE6" secondAttribute="top" constant="8" id="jX6-EP-1kR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
