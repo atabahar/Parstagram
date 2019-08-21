@@ -13,6 +13,8 @@ import Parse
 class LoginViewController: UIViewController
 {
 
+    @IBOutlet var titleLabel: UILabel!
+    
     @IBOutlet weak var usernameField: UITextField!
     
     @IBOutlet weak var passwordField: UITextField!
@@ -22,7 +24,20 @@ class LoginViewController: UIViewController
     {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupTitle()
+    }
+    
+    func setupTitle()
+    {
+        // With this NS we are opening a library of text editing tools,
+        //  Then we assign it with (.attributedText)
+        let attributedTitleText = NSMutableAttributedString()
+        
+        attributedTitleText.append(NSAttributedString(string: "Build your profile", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20), NSAttributedString.Key.foregroundColor : UIColor(red:1.00, green:0.54, blue:0.17, alpha:1.0)  ]))
+        
+        //
+        
+        titleLabel.attributedText = attributedTitleText
     }
     
     @IBAction func onSignIn(_ sender: Any) {
